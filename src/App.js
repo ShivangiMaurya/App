@@ -1,10 +1,7 @@
 
 import './App.css';
 import React,{useState} from "react";
-
 const App=()=> {
- 
-
   const dummyData = [
     {
         id : 1,
@@ -99,8 +96,6 @@ const App=()=> {
   const filterData=(e)=>{
     if(e.target.value!=""){
       setValue(e.target.value);
-      // callback function ka variable
-      // const o;
       const filterTable=dataSource.filter(o=>Object.keys(o).some(k=>
       String(o[k]).toLowerCase().includes(e.target.value.toLowerCase())
       ));
@@ -110,13 +105,9 @@ const App=()=> {
       setDataSource([...dataSource])
     }
     }
-  
-
-
   return (
    <>
    <div class="input-group flex-nowrap dark">
-  {/* <span class="input-group-text" id="addon-wrapping">@</span> */}
   <input style={{backgroundColor:"#a8e9a5de"}} 
   type="text" 
   value={value}
@@ -169,6 +160,4 @@ const App=()=> {
    </>
   );
 }
-
-
 export default App;
